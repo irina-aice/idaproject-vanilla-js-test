@@ -1,0 +1,13 @@
+.product-sorting {
+  margin-left: auto;
+  margin-bottom: 16px;
+}
+
+.product-sorting__select {
+  @include form-shadow;
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 12px;
+  line-height: 15px;
+  color: $pale-grey;
+}

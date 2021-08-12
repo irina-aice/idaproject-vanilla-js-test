@@ -1,0 +1,20 @@
+.product-list {
+  @include reset-list;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 16px;
+}
+
+@media (min-width: $width-tablet) {
+  .product-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 16px;
+  }
+}
+
+@media (min-width: $width-desktop) {
+  .product-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

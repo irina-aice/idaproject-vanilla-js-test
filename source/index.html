@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>idaproject-vanilla-js-test</title>
+  <meta name="description" content="Велосипеды">
+  <link rel="preload" href="fonts/source-sans-pro-regular.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-regular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-semibold.woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/source-sans-pro-semibold.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="grid">
+      <div class="grid__form">
+        <h2>Добавление товара</h2>
+        <form action="" class="form js-form">
+          <ul class="form__list">
+            <li>
+              <label class="form__label" for="title">Наименование товара</label>
+              <input class="js-input-title" id="title" placeholder="Введите наименование товара" required>
+            </li>
+            <li>
+              <label for="description">Описание товара</label>
+              <textarea class="js-input-description" id="description" placeholder="Введите описание товара"></textarea>
+            </li>
+            <li>
+              <label class="form__label" for="image">Ссылка на изображение товара</label>
+              <input class="js-input-image" id="image" placeholder="Введите ссылку" required>
+            </li>
+            <li>
+              <label class="form__label" for="price">Цена товара</label>
+              <input class="js-input-price" id="price" placeholder="Введите цену" required>
+            </li>
+          </ul>
+          <button type="submit" class="js-add-product">
+            Добавить товар
+          </button>
+        </form>
+      </div>
+      <div class="grid__product">
+        <div class="product-sorting">
+          <label for="product-select" class="visually-hidden">Сортировать продукт</label>
+          <select id="product-select" name="products" class="product-sorting__select">
+            <option value="">по умолчанию</option>
+            <option value="min-price">по цене min (от меньшего к большему)</option>
+            <option value="max-price">по цене max (от большего к меньшему)</option>
+            <option value="product-name">по наименованию</option>
+          </select>
+        </div>
+        <ul class="product-list js-product-list">
+          <li class="product js-product">
+            <a href="#">
+              <button type="button" class="product__button js-product-button">
+                <span class="visually-hidden">Удалить</span>
+              </button>
+              <img src="../img/product-image.jpg" alt="Фото товара">
+              <div class="product__information">
+                <h3>Наименование товара</h3>
+                <p class="product__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                <p class="product__price">10 000 руб.</p>
+              </div>
+            </a>
+          </li>
+          <li class="product js-product">
+            <a href="#">
+              <button type="button" class="product__button js-product-button">
+                <span class="visually-hidden">Удалить</span>
+              </button>
+              <img src="../img/product-image.jpg" alt="Фото товара">
+              <div class="product__information">
+                <h3>Наименование товара</h3>
+                <p class="product__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                <p class="product__price">10 000 руб.</p>
+              </div>
+            </a>
+          </li>
+          <li class="product js-product">
+            <a href="#">
+              <button type="button" class="product__button js-product-button">
+                <span class="visually-hidden">Удалить</span>
+              </button>
+              <img src="../img/product-image.jpg" alt="Фото товара">
+              <div class="product__information">
+                <h3>Наименование товара</h3>
+                <p class="product__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                <p class="product__price">10 000 руб.</p>
+              </div>
+            </a>
+          </li>
+          <li class="product js-product">
+            <a href="#">
+              <button type="button" class="product__button js-product-button">
+                <span class="visually-hidden">Удалить</span>
+              </button>
+              <img src="../img/product-image.jpg" alt="Фото товара">
+              <div class="product__information">
+                <h3>Наименование товара</h3>
+                <p class="product__description">Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                <p class="product__price">10 000 руб.</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <template id="product-template">
+    <li class="product js-product">
+      <a href="#">
+        <button type="button" class="product__button js-product-button">
+          <span class="visually-hidden">Удалить</span>
+        </button>
+        <img class="js-product-image" src="" alt="Фото товара">
+        <div class="product__information">
+          <h3 class="js-product-title"></h3>
+          <p class="js-product-description product__description"></p>
+          <p class="js-product-price product__price"></p>
+        </div>
+      </a>
+    </li>
+  </template>
+  <script src="js/main.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@media (min-width: $width-tablet) {
+  .grid {
+    display: flex;
+  }
+}
+
+.grid__form h2 {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (min-width: $width-tablet) {
+  .grid__form h2 {
+    margin-top: 0;
+    padding: 0;
+    text-align: left;
+  }
+}
+
+@media (min-width: $width-tablet) {
+  .grid__form {
+    width: 30%;
+    padding-right: 16px;
+  }
+}
+
+.grid__product {
+  margin-top: 16px;
+}
+
+@media (min-width: $width-tablet) {
+  .grid__product {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-top: 0;
+  }
+}

@@ -1,0 +1,18 @@
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin shadow {
+  background-color: $light-grey;
+  box-shadow: 0 20px 30px $dark-grey, 0 6px 10px $darker-grey;
+  border-radius: 4px;
+}
+
+@mixin form-shadow {
+  background-color: $light-grey;
+  box-shadow: 0 2px 5px $deep-grey;
+  border-radius: 4px;
+  border: 0;
+}
