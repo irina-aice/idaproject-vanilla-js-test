@@ -3,9 +3,7 @@
 (function () {
   const form = document.querySelector('.js-form');
   const productList = document.querySelector('.js-product-list');
-  const product = document.querySelector('.js-product');
   const productTemplate = document.querySelector('#product-template').content;
-  const productButton = document.querySelector('.js-product-button');
 
   form.addEventListener('submit', (evt) => {
     evt.preventDefault();
@@ -22,8 +20,11 @@
     productList.appendChild(productElement);
   });
 
-  productButton.addEventListener('click', (evt) => {
-    evt.preventDefault();
-    product.setAttribute('data-state', 'close');
+  productList.addEventListener('click', (evt) => {
+    if (evt.target.classList.contains('js-product-button')) {
+      evt.preventDefault();
+      const product = evt.target.closest('.js-product');
+      product.setAttribute('data-state', 'close');
+    }
   });
 })();
